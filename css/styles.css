@@ -1,0 +1,20 @@
+.list{
+    list-style: none;
+    display: flex;
+
+}
+#btn{
+    margin-left: 250px;
+}
+
+.img{
+    display: flex;
+}
+
+.img1{
+    margin-left: 80px;
+}
+
+.img2{
+    margin-left: 445px;
+}
