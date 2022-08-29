@@ -1,6 +1,6 @@
 <?php
 
-
+	//connection a la base de donnees 
 	$servername = "localhost";
 	$dbname = "blog";
 	$username = "root";
