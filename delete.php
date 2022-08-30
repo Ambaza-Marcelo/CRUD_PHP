@@ -1,6 +1,7 @@
 <?php 
 
 	include('connection.php');
+	//delete
 	$id = $_GET['id'];
 	$sql = 'delete from messages where id = :id';
 
