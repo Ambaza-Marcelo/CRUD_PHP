@@ -1,5 +1,6 @@
 <?php
 include('connection.php');
+//update script using pdo connection
 	
 			$id = $_GET['id'];
 			$nom = htmlspecialchars($_POST['nom']);
@@ -14,6 +15,7 @@ include('connection.php');
   			$sql = "UPDATE `messages` SET `nom`='$nom',`prenom`='$prenom',`email`='$email',`description`='$description',`telephone`='$telephone' WHERE `id` = '$id'";
   			
   			if ($conn->exec($sql)) {
+  				//auto redirect
   				header("Location: messages.php");
   			}
   			
