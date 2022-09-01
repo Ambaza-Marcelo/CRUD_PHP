@@ -11,6 +11,7 @@
 <head>
 	<title>contact action</title>
 	<meta charset="utf-8">
+	<!-- bootsrap import -->
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
@@ -27,6 +28,7 @@
 			</ul>
 		</div>
 	</div>
+	<!-- view data from database -->
 	<table class="table table-striped">
 		<h1 >liste des messages</h1>
 		<tr>
