@@ -31,6 +31,7 @@
 	<div id="div" class="alert alert-primary">Bonjour,on vous appelle<span id="span"></span></div>
 
 </div>
+<!-- import jquery package -->
 <script type="text/javascript" src="js/jquery-2.2.4.min.js"></script>
 <script>
 // Using multiple unit types within one animation.
