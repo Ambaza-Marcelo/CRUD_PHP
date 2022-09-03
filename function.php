@@ -1,4 +1,7 @@
 <?php
+
+
+	//functions
 	function bonjour(){
 		echo "hello world";
 	}
