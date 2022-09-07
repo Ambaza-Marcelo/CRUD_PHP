@@ -1,7 +1,8 @@
 <?php 
 
 	include('connection.php');
-
+	//recuperation des donnees saisies dans le formulaire 
+	//protection des formulaires 
 	$nom = htmlspecialchars($_POST['nom']);
 	$prenom = htmlspecialchars($_POST['prenom']);
 	$email = htmlspecialchars($_POST['email']);
