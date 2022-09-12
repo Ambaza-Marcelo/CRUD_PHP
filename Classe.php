@@ -32,6 +32,8 @@ include('function.php');
 		}
 	}
 
+	//creation d'un objet
+
 	$objet1 = new Classe(12,15);
 
 	$a = $objet1->getX();
