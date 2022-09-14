@@ -1,6 +1,7 @@
 <?php 
 
 	include('connection.php');
+	//affichage des donneees dans le tableau 
 
 			$data = $conn->query("select * from messages")->fetchAll();
 
