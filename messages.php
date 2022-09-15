@@ -50,6 +50,7 @@
 			<td width="10%"><?php echo $row['email'] ;?></td>
 			<td width="10%"><?php echo $row['telephone'] ;?></td>
 			<td width="60%"><?php echo $row['description'] ;?></td>
+			<!-- action btn -->
 			<td width="30%"><a href='editPage.php?id=<?php echo $row['id'];?>' onclick="return(confirm('voulez vous vraiment modifier <?php echo $row['prenom'];?>'))" class='btn btn-primary'>modifier</a>&nbsp;<a href='delete.php?id=<?php echo $row['id'];?>' class='btn btn-danger' onclick="return(confirm('voulez vous vraiment supprimer <?php echo $row['prenom'];?>'))">supprimer</a></td>
 			</tr>
  	<?php } ;?>
