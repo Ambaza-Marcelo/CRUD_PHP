@@ -11,6 +11,7 @@
 	<script type="text/javascript" src="js/js.js"></script>
 </head>
 <body>
+	<!--home page -->
 <div class="container">
 <div>
 	<div>
