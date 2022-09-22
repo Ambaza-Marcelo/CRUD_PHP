@@ -1,6 +1,6 @@
 <?php
  include('connection.php');
- 
+ //recuperation de l'identifiant transmis dans URL
  $id = $_GET['id'];
 
  $sql = 'select * from messages where id = :id';
