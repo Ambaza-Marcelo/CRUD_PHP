@@ -10,6 +10,7 @@
 	
 	if ($statement->execute()) {
 		$message = "Vous avez supprimee avec success";
+		//redirect to home
 		header("location: messages.php");
 	}
 
