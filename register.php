@@ -1,22 +1,25 @@
 <?php 
 	include('connection.php'); 
+	if(isset($_POST['submit'])){
 	$username = htmlspecialchars($_POST['username']);
 	$password = md5(htmlspecialchars($_POST['password']));
 	$password_confirmation = md5(htmlspecialchars($_POST['password_confirmation']));
 
-
-	if (isset($_POST['submit'])) {
 		if (!empty($username) && !empty($password) && !empty($password_confirmation)) {
-			$q = $conn->prepare("insert into users(username,password,password_confirmation) values(:username,:password,:password_confirmation)");
+			if ($password == $password_confirmation) {
+				$q = $conn->prepare("insert into users(username,password,password_confirmation) values(:username,:password,:password_confirmation)");
 
-			$q->bindParam(':username' , $username);
-			$q->bindParam(':password' , $password);
-			$q->bindParam(':password_confirmation' , $password_confirmation);
+				$q->bindParam(':username' , $username);
+				$q->bindParam(':password' , $password);
+				$q->bindParam(':password_confirmation' , $password_confirmation);
 
-			if ($q->execute()) {
+				if ($q->execute()) {
 				$message = "vous avez enregistree avec succes";
+				}else{
+					$message = "Erreur d enregistrement";
+				}
 			}else{
-				$message = "Erreur d enregistrement";
+				$message = "Veuillez fournir les mots de passe correctes";
 			}
 		}else{
 			$message = "Tous les champs sont obligatoires";
@@ -34,6 +37,12 @@
 <body style="margin-top: 10%;">
 	<br>
 	<div class="container" id="register">
+		<?php
+			if (isset($message)) {
+				echo "<h1 class = 'alert alert-info'>".$message."</h1>";
+			}
+		?>
+		<form action="register.php" method="POST">
 		<div class="row">
 			<div class="col-md-6">
 				<label for="username">Nom Utilisateur</label>
@@ -55,6 +64,7 @@
 				<button type="submit" name="submit" class="btn btn-success">Enregister</button>
 			</div>
 		</div>
+	</form>
 	</div>
 </body>
 </html>
