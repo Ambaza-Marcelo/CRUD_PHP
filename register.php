@@ -1,3 +1,28 @@
+<?php 
+	include('connection.php'); 
+	$username = htmlspecialchars($_POST['username']);
+	$password = md5(htmlspecialchars($_POST['password']));
+	$password_confirmation = md5(htmlspecialchars($_POST['password_confirmation']));
+
+
+	if (isset($_POST['submit'])) {
+		if (!empty($username) && !empty($password) && !empty($password_confirmation)) {
+			$q = $conn->prepare("insert into users(username,password,password_confirmation) values(:username,:password,:password_confirmation)");
+
+			$q->bindParam(':username' , $username);
+			$q->bindParam(':password' , $password);
+			$q->bindParam(':password_confirmation' , $password_confirmation);
+
+			if ($q->execute()) {
+				$message = "vous avez enregistree avec succes";
+			}else{
+				$message = "Erreur d enregistrement";
+			}
+		}else{
+			$message = "Tous les champs sont obligatoires";
+		}
+	}
+;?>
 <!DOCTYPE html>
 <html>
 <head>
