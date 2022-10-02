@@ -1,4 +1,5 @@
 <?php 
+	//importation page connection a la base de donnees
 	include('connection.php'); 
 	if(isset($_POST['submit'])){
 	$username = htmlspecialchars($_POST['username']);
