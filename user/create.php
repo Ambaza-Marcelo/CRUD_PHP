@@ -34,10 +34,10 @@
 <head>
 	<title>create user</title>
 	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/styles.css">
 </head>
-<body style="margin-top: 10%;">
+<body>
 	<br>
 	<div class="container" id="register">
 		<?php
