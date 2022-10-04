@@ -39,13 +39,13 @@
 </head>
 <body>
 	<br>
-	<div class="container" id="register">
+	<div class="container">
 		<?php
 			if (isset($message)) {
 				echo "<h1 class = 'alert alert-info'>".$message."</h1>";
 			}
 		?>
-		<form action="register.php" method="POST">
+		<form action="create.php" method="POST">
 		<div class="row">
 			<div class="col-md-6">
 				<label for="username">Nom Utilisateur</label>

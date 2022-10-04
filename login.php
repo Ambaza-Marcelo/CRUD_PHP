@@ -12,8 +12,13 @@
             $query->execute(array($username,$password));
             $row = $query->rowCount();
             $fetch = $query->fetch();
-            if($row > 0) {
-                header("location: admin.php");
+            if($row > 0 ) {
+            	if ($fetch['role'] == 'admin') {
+            		header("location: admin.php");
+            	}else{
+            		header("location: user/list.php");
+            	}
+                
             } else{
                 $message = "nom Utilisateur ou mot de passe incorrect";
             }

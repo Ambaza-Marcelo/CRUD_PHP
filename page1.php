@@ -20,7 +20,6 @@
 				<li><a href="page1.php">Accueil</a></li>&nbsp;&nbsp;&nbsp;&nbsp;
 				<li><a href="actualites.php">Actualites</a></li>&nbsp;&nbsp;&nbsp;&nbsp;
 				<li><a href="#contact">contact</a></li>&nbsp;&nbsp;&nbsp;&nbsp;
-				<li><a href="messages.php">Messages</a></li>&nbsp;&nbsp;&nbsp;&nbsp;
 				<li><a href="register.php">S'inscrire</a></li>&nbsp;&nbsp;&nbsp;&nbsp;
 				<li id="btn"><a href="login.php" class="btn btn-primary" onclick="return(confirm('Avez vous le compte?'))">Se connecter</a></li>
 			</ul>

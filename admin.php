@@ -3,7 +3,8 @@
 	include('connection.php');
 	//affichage des donneees dans le tableau 
 
-			$data = $conn->query("select * from messages")->fetchAll();
+			$data = $conn->query("select * from users")->fetchAll();
+			$role = $conn->query("select role from users")->fetchAll();
 
 
 ?>
@@ -23,34 +24,33 @@
 			<ul class="list">
 				<li><a href="">Home</a></li>&nbsp;&nbsp;&nbsp;&nbsp;
 				<li><a href="messages.php">Messages</a></li>&nbsp;&nbsp;&nbsp;&nbsp;
-				<li><a href="user/list.php">Utilisateurs</a></li>&nbsp;&nbsp;&nbsp;&nbsp;
+				<li><a href="admin.php">Utilisateurs</a></li>&nbsp;&nbsp;&nbsp;&nbsp;
 				<li id="btn"><a href="login.php" class="btn btn-primary" onclick="return(confirm('voulez-vous se deconnecter?'))">Se déconnecter</a></li>
 			</ul>
 		</div>
 	</div>
+	<div>
+		<a href="create.php" class="btn btn-success">Nouveau Utilisateur</a>
+	</div>
 	<!-- view data from database -->
 	<table class="table table-striped">
-		<h1 >liste des messages</h1>
+		<h1 >liste des utilisateurs</h1>
 		<tr>
 			<th width="3%">ID</th>
-			<th width="10%">Nom</th>
-			<th width="10%">Prenom</th>
-			<th width="10%">Email</th>
-			<th width="10%">Telephone</th>
-			<th width="60%">Description</th>
+			<th width="10%">Username</th>
+			<th width="10%">Password</th>
+			<th width="10%">Role</th>
 			<th width="30%">Action</th>
 		</tr>
 		<?php 
 		foreach($data as $row){ ?>
 			<tr class='bg-info'>
 			<td width="3%"><?php echo $row['id'] ;?></td>
-			<td width="10%"><?php echo $row['nom'] ;?></td>
-			<td width="10%"><?php echo $row['prenom'] ;?></td>
-			<td width="10%"><?php echo $row['email'] ;?></td>
-			<td width="10%"><?php echo $row['telephone'] ;?></td>
-			<td width="60%"><?php echo $row['description'] ;?></td>
+			<td width="10%"><?php echo $row['username'] ;?></td>
+			<td width="10%"><?php echo $row['password'] ;?></td>
+			<td width="10%"><?php echo $row['role'] ;?></td>
 			<!-- action btn -->
-			<td width="30%"><a href='editPage.php?id=<?php echo $row['id'];?>' onclick="return(confirm('voulez vous vraiment modifier <?php echo $row['prenom'];?>'))" class='btn btn-primary'>modifier</a>&nbsp;<a href='delete.php?id=<?php echo $row['id'];?>' class='btn btn-danger' onclick="return(confirm('voulez vous vraiment supprimer <?php echo $row['prenom'];?>'))">supprimer</a></td>
+			<td width="30%"><a href='edit.php?id=<?php echo $row['id'];?>' onclick="return(confirm('voulez vous vraiment modifier <?php echo $row['username'];?>'))" class='btn btn-primary'>modifier</a>&nbsp;<a href='delete.php?id=<?php echo $row['id'];?>' class='btn btn-danger' onclick="return(confirm('voulez vous vraiment supprimer <?php echo $row['username'];?>'))">supprimer</a></td>
 			</tr>
  	<?php } ;?>
 		
