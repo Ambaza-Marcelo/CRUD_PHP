@@ -3,30 +3,22 @@
 	include('connection.php');
 	//affichage des donneees dans le tableau 
 
-	if (isset($_POST['submit'])) {
-
-		$username = htmlspecialchars($_POST['username']);
-		$password = md5(htmlspecialchars($_POST['password']));
-
-		$data = $conn->query("select * from users")->fetchAll();
-
-		if (!empty($username) && !empty($password)) {
-			$count = 0;
-			foreach ($data as $row) {
-			if ($row['username'] == $username && $row['password'] == $password) {
-				header('Location: admin.php')
-			}else{
-				$count = $count + 1;
-			}
-		}
-		if ($count > 0) {
-			$message = "mot de passe ou nom utilisateur incorect";
-		}
-		}else{
-			echo "veuillez saisir tous les entrees";
-		}
-		
-	}
+	if(ISSET($_POST['submit'])){
+        if($_POST['username'] != "" || $_POST['password'] != ""){
+            $username = $_POST['username'];
+            $password = $_POST['password'];
+            $sql = "SELECT * FROM `users` WHERE `username`=? AND `password`=? ";
+            $query = $conn->prepare($sql);
+            $query->execute(array($username,$password));
+            $row = $query->rowCount();
+            $fetch = $query->fetch();
+            if($row > 0) {
+                header("location: messages.php");
+            } else{
+                $message = "nom Utilisateur ou mot de passe incorrect";
+            }
+        }
+    }
 
 
 ?>

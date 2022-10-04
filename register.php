@@ -3,8 +3,8 @@
 	include('connection.php'); 
 	if(isset($_POST['submit'])){
 	$username = htmlspecialchars($_POST['username']);
-	$password = md5(htmlspecialchars($_POST['password']));
-	$password_confirmation = md5(htmlspecialchars($_POST['password_confirmation']));
+	$password = htmlspecialchars($_POST['password']);
+	$password_confirmation = htmlspecialchars($_POST['password_confirmation']);
 
 		if (!empty($username) && !empty($password) && !empty($password_confirmation)) {
 			if ($password == $password_confirmation) {
