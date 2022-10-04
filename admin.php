@@ -23,6 +23,7 @@
 			<ul class="list">
 				<li><a href="">Home</a></li>&nbsp;&nbsp;&nbsp;&nbsp;
 				<li><a href="messages.php">Messages</a></li>&nbsp;&nbsp;&nbsp;&nbsp;
+				<li><a href="user/list.php">Utilisateurs</a></li>&nbsp;&nbsp;&nbsp;&nbsp;
 				<li id="btn"><a href="login.php" class="btn btn-primary" onclick="return(confirm('voulez-vous se deconnecter?'))">Se déconnecter</a></li>
 			</ul>
 		</div>
