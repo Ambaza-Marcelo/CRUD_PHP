@@ -65,6 +65,7 @@
 				<label for="role">Role</label>
 				<div class="form-group" id="role">
 					<select class="form-control" name="role">
+						<option selected="selected" disabled="disabled">merci de choisir</option>
 						<option value="user">User</option>
 						<option value="admin">Admin</option>
 					</select>
