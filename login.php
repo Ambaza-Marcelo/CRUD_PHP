@@ -13,7 +13,7 @@
             $row = $query->rowCount();
             $fetch = $query->fetch();
             if($row > 0) {
-                header("location: messages.php");
+                header("location: admin.php");
             } else{
                 $message = "nom Utilisateur ou mot de passe incorrect";
             }
