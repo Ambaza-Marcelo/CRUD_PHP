@@ -50,7 +50,7 @@
 			<td width="10%"><?php echo $row['password'] ;?></td>
 			<td width="10%"><?php echo $row['role'] ;?></td>
 			<!-- action btn -->
-			<td width="30%"><a href='edit.php?id=<?php echo $row['id'];?>' onclick="return(confirm('voulez vous vraiment modifier <?php echo $row['username'];?>'))" class='btn btn-primary'>modifier</a>&nbsp;<a href='delete.php?id=<?php echo $row['id'];?>' class='btn btn-danger' onclick="return(confirm('voulez vous vraiment supprimer <?php echo $row['username'];?>'))">supprimer</a></td>
+			<td width="30%"><a href='' onclick="return(confirm('voulez vous vraiment modifier <?php echo $row['username'];?>'))" class='btn btn-primary'>modifier</a>&nbsp;<a href='delete.php?id=<?php echo $row['id'];?>' class='btn btn-danger' onclick="return(confirm('voulez vous vraiment supprimer <?php echo $row['username'];?>'))">supprimer</a></td>
 			</tr>
  	<?php } ;?>
 		
