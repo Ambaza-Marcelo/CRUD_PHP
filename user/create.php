@@ -8,6 +8,7 @@
 	$role = htmlspecialchars($_POST['role']);
 
 		if (!empty($username) && !empty($password) && !empty($password_confirmation) && !empty($role)) {
+			//comparer les mots de passe
 			if ($password == $password_confirmation) {
 				$q = $conn->prepare("insert into users(username,password,password_confirmation,role) values(:username,:password,:password_confirmation,:role)");
 
