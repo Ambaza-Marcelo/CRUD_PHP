@@ -46,7 +46,8 @@
 			<td width="10%"><?php echo $row['role'] ;?></td>
 			<!-- action btn -->
 			<td width="30%">
-				<a href="btn btn-primary">Editer</a>
+				<a class="btn btn-primary" href="">Editer</a>
+				<a class="btn btn-danger" href="">Supprimer</a>
 			</td>
 			</tr>
  	<?php } ;?>
