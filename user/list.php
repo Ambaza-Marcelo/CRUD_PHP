@@ -45,7 +45,9 @@
 			<td width="10%"><?php echo $row['password'] ;?></td>
 			<td width="10%"><?php echo $row['role'] ;?></td>
 			<!-- action btn -->
-			<td width="30%"></td>
+			<td width="30%">
+				<a href="btn btn-primary">Editer</a>
+			</td>
 			</tr>
  	<?php } ;?>
 		
